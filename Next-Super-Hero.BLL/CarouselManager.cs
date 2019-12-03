@@ -42,7 +42,7 @@ namespace Next_Super_Hero.BLL
             using (ICarouselService carouselSer = new CarouselService())
             {
 
-                return await carouselSer.GetAllAsync().Select(m=>new CarouselDto()
+                return await carouselSer.GetAllAsync().Where(m => m.IsRemove != true).Select(m=>new CarouselDto()
                 {
                     ImgUrl=m.ImgUrl,
                     MovieId=m.MovieId,

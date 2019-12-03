@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="IBaseService.cs" />
     <Compile Include="ICarouselService.cs" />
+    <Compile Include="IHotHeroService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

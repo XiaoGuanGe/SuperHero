@@ -65,8 +65,21 @@
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
     <Compile Include="Carousel.cs" />
+    <Compile Include="HotHero.cs" />
+    <Compile Include="Migrations\201912030357368_addHotSuper.cs" />
+    <Compile Include="Migrations\201912030357368_addHotSuper.Designer.cs">
+      <DependentUpon>201912030357368_addHotSuper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912030626447_modifyHotHero.cs" />
+    <Compile Include="Migrations\201912030626447_modifyHotHero.Designer.cs">
+      <DependentUpon>201912030626447_modifyHotHero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912030716325_mysqlRefixUtf8.cs" />
+    <Compile Include="Migrations\201912030716325_mysqlRefixUtf8.Designer.cs">
+      <DependentUpon>201912030716325_mysqlRefixUtf8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SuperHero.cs" />
     <Compile Include="SuperHeroContext.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +88,17 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201912030357368_addHotSuper.resx">
+      <DependentUpon>201912030357368_addHotSuper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912030626447_modifyHotHero.resx">
+      <DependentUpon>201912030626447_modifyHotHero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912030716325_mysqlRefixUtf8.resx">
+      <DependentUpon>201912030716325_mysqlRefixUtf8.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
