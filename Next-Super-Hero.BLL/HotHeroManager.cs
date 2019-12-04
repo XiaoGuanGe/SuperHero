@@ -57,7 +57,7 @@ namespace Next_Super_Hero.BLL
         {
             using (IHotHeroService hHeroSer = new HotHeroService())
             {
-                return await hHeroSer.GetAllAsync().Where(m=>m.IsRemove!=true).Select(m => new HotHeroDto()
+                return await hHeroSer.GetAllAsync().Where(m=>m.IsRemove!=true).OrderBy(m=>m.MovieId).Select(m => new HotHeroDto()
                 {
                     MoiveId = m.MovieId,
                     MoiveName = m.MovieName,

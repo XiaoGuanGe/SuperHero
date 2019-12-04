@@ -60,25 +60,12 @@ namespace Next_Super_Hero.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("GetHotHero")]
-        public GetHotHeroReturn GetHotHero()
+        public List<HotHeroDto> GetHotHero()
         {
             HotHeroManager hhm = new HotHeroManager();
             //这里返回的是Task<T>
             var result = hhm.GetAllHotHeroAsync();
-            var result2=result.Result;
-            GetHotHeroReturn getHotHeroReturn = new GetHotHeroReturn();
-            if (result != null)
-            {
-                getHotHeroReturn.ListHeroHot = result2;
-                getHotHeroReturn.Msg = "OK";
-                getHotHeroReturn.Status = 200;
-            }
-            else
-            {
-                getHotHeroReturn.Msg = "error";
-                getHotHeroReturn.Status = 200;
-            }
-            return getHotHeroReturn;
+            return result.Result;
         }
     }
 }
