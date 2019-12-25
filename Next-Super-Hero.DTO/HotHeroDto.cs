@@ -8,12 +8,12 @@ namespace Next_Super_Hero.DTO
 {
     public class HotHeroDto
     {
-        public string MoiveId { get; set; }
+        public string MovieId { get; set; }
 
         /// <summary>
         /// 电影名字
         /// </summary>
-        public string MoiveName { get; set; }
+        public string MovieName { get; set; }
         /// <summary>
         /// 海报url
         /// </summary>

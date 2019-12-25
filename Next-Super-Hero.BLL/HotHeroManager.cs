@@ -59,8 +59,8 @@ namespace Next_Super_Hero.BLL
             {
                 return await hHeroSer.GetAllAsync().Where(m=>m.IsRemove!=true).OrderBy(m=>m.MovieId).Select(m => new HotHeroDto()
                 {
-                    MoiveId = m.MovieId,
-                    MoiveName = m.MovieName,
+                    MovieId = m.MovieId,
+                    MovieName = m.MovieName,
                     Poster = m.Poster,
                     Cover = m.Cover,
                     Trailer = m.Trailer,

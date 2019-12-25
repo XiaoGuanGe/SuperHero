@@ -67,5 +67,27 @@ namespace Next_Super_Hero.Controllers
             var result = hhm.GetAllHotHeroAsync();
             return result.Result;
         }
+        [HttpPost]
+        [Route("GuessULike")]
+        public List<HotHeroDto> GuessULike()
+        {
+            HotHeroManager hhm = new HotHeroManager();
+            //这里返回的是Task<T>
+            var result = hhm.GetAllHotHeroAsync();
+            Random random = new Random();
+            int index = 0;
+            
+            for(int i=0;i<result.Result.Count;i++)
+            {
+                index = random.Next(0, result.Result.Count - 1);
+                if(index!=i)
+                {
+                   var temp = result.Result[i];
+                    result.Result[i] = result.Result[index];
+                    result.Result[index] = temp;
+                }
+            }
+            return result.Result;
+        }
     }
 }
